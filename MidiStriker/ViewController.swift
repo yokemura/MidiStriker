@@ -8,11 +8,20 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    @IBOutlet weak var textField: NSTextField!
+    
+    let handler = MIDIHandler()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear() {
+        textField.stringValue = "ready"
+        
+        handler.findMIDISources()
     }
 
     override var representedObject: Any? {
@@ -20,7 +29,7 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
+
+
 
