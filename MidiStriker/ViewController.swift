@@ -6,22 +6,22 @@
 //
 
 import Cocoa
+import os.log
 
 class ViewController: NSViewController {
     @IBOutlet weak var textField: NSTextField!
+    @IBOutlet weak var sourceCombo: NSComboBox!
     
-    let handler = MIDIHandler()
+    var handler: MIDIManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        handler = MIDIManager(onSourceChanged: onSourceChanged,
+                              onNoteEvent: onNoteEventReceived)
     }
     
     override func viewDidAppear() {
         textField.stringValue = "ready"
-        
-        handler.findMIDISources()
     }
 
     override var representedObject: Any? {
@@ -29,7 +29,35 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    func onSourceChanged() {
+    }
+    
+    func onNoteEventReceived(event: NoteEvent) {
+        
+    }
 }
 
+extension ViewController: NSComboBoxDelegate, NSComboBoxDataSource, NSComboBoxCellDataSource {
+    func comboBoxSelectionDidChange(_ notification: Notification) {
+        let index = sourceCombo.indexOfSelectedItem
+        os_log("Combo box index = %d", index)
+        guard let handler = handler,
+              index >= 0, index < handler.sources.count else {
+            return
+        }
+        
+        let source = handler.sources[index]
+        handler.startObserving(source: source)
+    }
+    
+    func numberOfItems(in comboBox: NSComboBox) -> Int {
+        return handler?.sources.count ?? 0
+    }
+
+    func comboBox(_ comboBox: NSComboBox, objectValueForItemAt index: Int) -> Any? {
+        handler?.sources[index].modelAndPortName
+    }
+}
 
 

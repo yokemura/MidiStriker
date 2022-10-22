@@ -14,8 +14,10 @@
 		4B0C73162904101200739653 /* MidiStrikerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73152904101200739653 /* MidiStrikerTests.swift */; };
 		4B0C73202904101200739653 /* MidiStrikerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C731F2904101200739653 /* MidiStrikerUITests.swift */; };
 		4B0C73222904101200739653 /* MidiStrikerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73212904101200739653 /* MidiStrikerUITestsLaunchTests.swift */; };
-		4B0C732F290413ED00739653 /* MIDIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C732E290413ED00739653 /* MIDIHandler.swift */; };
-		4B0C733129041BB400739653 /* MIDISourceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733029041BB400739653 /* MIDISourceWrapper.swift */; };
+		4B0C732F290413ED00739653 /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C732E290413ED00739653 /* MIDIManager.swift */; };
+		4B0C733129041BB400739653 /* MIDISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733029041BB400739653 /* MIDISource.swift */; };
+		4B0C733329041E6600739653 /* MIDIPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733229041E6600739653 /* MIDIPort.swift */; };
+		4B0C73352904289A00739653 /* NoteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73342904289A00739653 /* NoteEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,10 @@
 		4B0C731B2904101200739653 /* MidiStrikerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidiStrikerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0C731F2904101200739653 /* MidiStrikerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiStrikerUITests.swift; sourceTree = "<group>"; };
 		4B0C73212904101200739653 /* MidiStrikerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiStrikerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4B0C732E290413ED00739653 /* MIDIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIHandler.swift; sourceTree = "<group>"; };
-		4B0C733029041BB400739653 /* MIDISourceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISourceWrapper.swift; sourceTree = "<group>"; };
+		4B0C732E290413ED00739653 /* MIDIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIManager.swift; sourceTree = "<group>"; };
+		4B0C733029041BB400739653 /* MIDISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISource.swift; sourceTree = "<group>"; };
+		4B0C733229041E6600739653 /* MIDIPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIPort.swift; sourceTree = "<group>"; };
+		4B0C73342904289A00739653 /* NoteEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,10 @@
 				4B0C73072904101100739653 /* Assets.xcassets */,
 				4B0C73092904101100739653 /* Main.storyboard */,
 				4B0C730C2904101100739653 /* MidiStriker.entitlements */,
-				4B0C732E290413ED00739653 /* MIDIHandler.swift */,
-				4B0C733029041BB400739653 /* MIDISourceWrapper.swift */,
+				4B0C732E290413ED00739653 /* MIDIManager.swift */,
+				4B0C733029041BB400739653 /* MIDISource.swift */,
+				4B0C733229041E6600739653 /* MIDIPort.swift */,
+				4B0C73342904289A00739653 /* NoteEvent.swift */,
 			);
 			path = MidiStriker;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			files = (
 				4B0C73062904101000739653 /* ViewController.swift in Sources */,
 				4B0C73042904101000739653 /* AppDelegate.swift in Sources */,
-				4B0C732F290413ED00739653 /* MIDIHandler.swift in Sources */,
-				4B0C733129041BB400739653 /* MIDISourceWrapper.swift in Sources */,
+				4B0C73352904289A00739653 /* NoteEvent.swift in Sources */,
+				4B0C732F290413ED00739653 /* MIDIManager.swift in Sources */,
+				4B0C733329041E6600739653 /* MIDIPort.swift in Sources */,
+				4B0C733129041BB400739653 /* MIDISource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

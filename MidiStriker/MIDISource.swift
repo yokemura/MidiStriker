@@ -1,5 +1,5 @@
 //
-//  MIDISourceWrapper.swift
+//  MIDISource.swift
 //  MidiStriker
 //
 //  Created by 除村武志 on 2022/10/22.
@@ -8,8 +8,16 @@
 import Foundation
 import CoreMIDI
 
-struct MIDISourceWrapper {
+class MIDISource {
+    init(sourceRef: MIDIEndpointRef) {
+        self.sourceRef = sourceRef
+    }
+    
     let sourceRef: MIDIEndpointRef
+    
+    var modelAndPortName: String {
+        modelName + " " + portName
+    }
     
     var portName: String {
         var cfStr: Unmanaged<CFString>?

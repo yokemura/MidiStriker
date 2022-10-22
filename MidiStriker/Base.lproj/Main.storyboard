@@ -706,30 +706,56 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MidiStriker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="174"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UzQ-Tf-Jbb">
-                                <rect key="frame" x="30" y="222" width="86" height="16"/>
+                                <rect key="frame" x="18" y="93" width="86" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Main Window" id="wXN-E4-vgK">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WIP-hL-nt2">
+                                <rect key="frame" x="22" y="134" width="30" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Port" id="fnU-0X-tAX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UMn-jD-buu">
+                                <rect key="frame" x="74" y="129" width="389" height="25"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" usesDataSource="YES" numberOfVisibleItems="5" id="1UI-n5-hIz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                                <connections>
+                                    <outlet property="dataSource" destination="XfG-lQ-9wD" id="OJ1-fE-ERL"/>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="GSc-So-JQg"/>
+                                </connections>
+                            </comboBox>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="UzQ-Tf-Jbb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="32" id="NoW-Yd-IAX"/>
-                            <constraint firstItem="UzQ-Tf-Jbb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="32" id="rYT-VX-6Qi"/>
+                            <constraint firstItem="UzQ-Tf-Jbb" firstAttribute="top" secondItem="UMn-jD-buu" secondAttribute="bottom" constant="24" id="5wd-3c-soi"/>
+                            <constraint firstItem="UzQ-Tf-Jbb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="6Ag-iV-1GP"/>
+                            <constraint firstItem="UMn-jD-buu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="IBP-sf-X3m"/>
+                            <constraint firstAttribute="trailing" secondItem="UMn-jD-buu" secondAttribute="trailing" constant="20" symbolic="YES" id="O86-Vd-iqI"/>
+                            <constraint firstItem="WIP-hL-nt2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="24" id="hik-aH-dmD"/>
+                            <constraint firstItem="UMn-jD-buu" firstAttribute="leading" secondItem="WIP-hL-nt2" secondAttribute="trailing" constant="24" id="wQr-km-Sf5"/>
+                            <constraint firstItem="WIP-hL-nt2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="24" id="xq2-E2-FC0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="sourceCombo" destination="UMn-jD-buu" id="fT8-Xm-Gqp"/>
                         <outlet property="textField" destination="UzQ-Tf-Jbb" id="fyE-GY-bW6"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="818"/>
         </scene>
     </scenes>
 </document>
