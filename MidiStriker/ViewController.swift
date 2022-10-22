@@ -34,7 +34,7 @@ class ViewController: NSViewController {
     }
     
     func onNoteEventReceived(event: NoteEvent) {
-        os_log("noteEvent: \(event)")
+        textField.stringValue = "noteEvent: \(event)"
     }
 }
 
