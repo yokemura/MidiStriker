@@ -9,17 +9,19 @@ import Foundation
 import CoreMIDI
 import os.log
 
+typealias MIDIEventCallback = (UnsafePointer<MIDIPacketList>, UnsafeMutableRawPointer?) -> Void
+
 class MIDIInputPort {
     private var portRef = MIDIPortRef()
     private let source: MIDISource
-    private let onReceived: (MIDIPacketList) -> Void
+    private let onReceived: MIDIEventCallback
     
-    init(client: MIDIClientRef, source: MIDISource, onReceived: @escaping (MIDIPacketList) -> Void) {
+    init(client: MIDIClientRef, source: MIDISource, onReceived: @escaping MIDIEventCallback) {
         self.onReceived = onReceived
         self.source = source
         
         let portName = source.portName as CFString
-        let err = MIDIInputPortCreateWithBlock(client, portName, &portRef, onMIDIMessageReceived)
+        let err = MIDIInputPortCreateWithBlock(client, portName, &portRef, onReceived)
         if err != noErr {
             os_log("Failed to create input port")
             return
@@ -33,10 +35,6 @@ class MIDIInputPort {
             return
         }
         os_log("MIDIEndpoint connected to InputPort")
-        
-        func onMIDIMessageReceived(message: UnsafePointer<MIDIPacketList>, srcConnRefCon: UnsafeMutableRawPointer?) {
-            os_log("MIDI Message Received")
-        }
     }
     
     deinit {

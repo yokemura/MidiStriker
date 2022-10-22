@@ -55,7 +55,7 @@ class MIDIManager {
     func startObserving(source: MIDISource) {
         currentPort = MIDIInputPort(client: client,
                                     source: source,
-                                    onReceived: onMIDIEventReceived)
+                                    onReceived: onMIDIMessageReceived)
     }
 
     private func onMIDIStatusChanged(message: UnsafePointer<MIDINotification>) {
@@ -68,8 +68,35 @@ class MIDIManager {
         }
     }
     
-    private func onMIDIEventReceived(event: MIDIPacketList) {
-        os_log("onMIDIEventReceived")
+    func onMIDIMessageReceived(message: UnsafePointer<MIDIPacketList>, srcConnRefCon: UnsafeMutableRawPointer?) {
+
+        let packetList: MIDIPacketList = message.pointee
+        let n = packetList.numPackets
+        //os_log("%i MIDI Message(s) Received", n)
+
+        var packet = packetList.packet
+        for _ in 0 ..< n {
+            // Handle MIDIPacket
+            let mes: UInt8 = packet.data.0 & 0xF0
+            let ch: UInt8 = packet.data.0 & 0x0F
+            if mes == 0x90 && packet.data.2 != 0 {
+                // Note On
+                let noteNo = packet.data.1
+                let velocity = packet.data.2
+                DispatchQueue.main.async {
+                    self.onNoteEvent(.noteOn(ch: Int(ch), number: Int(noteNo), velocity: Int(velocity)))
+                }
+            } else if (mes == 0x80 || mes == 0x90) {
+                // Note Off
+                let noteNo = packet.data.1
+                // let velocity = packet.data.2
+                DispatchQueue.main.async {
+                    self.onNoteEvent(.noteOff(ch: Int(ch), number: Int(noteNo)))
+                }
+            }
+            let packetPtr = MIDIPacketNext(&packet)
+            packet = packetPtr.pointee
+        }
     }
     
 }
