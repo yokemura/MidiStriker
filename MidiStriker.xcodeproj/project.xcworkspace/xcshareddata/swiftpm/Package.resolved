@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "sauce",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Clipy/Sauce",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5572294d4363481f3c4fde8e92ba68999816ebc0"
+      }
+    }
+  ],
+  "version" : 2
+}

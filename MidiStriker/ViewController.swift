@@ -13,11 +13,27 @@ class ViewController: NSViewController {
     @IBOutlet weak var sourceCombo: NSComboBox!
     
     var manager: MIDIManager?
+    var keyMap: KeyMapping?
+    
+    let mapping = """
+{
+    "mapping": [
+        {"note": 48, "key": "a"},
+        {"note": 49, "key": "b"},
+        {"note": 50, "key": "space"}
+    ]
+}
+"""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         manager = MIDIManager(onSourceChanged: onSourceChanged,
                               onNoteEvent: onNoteEventReceived)
+        
+        let decoder = JSONDecoder()
+        let data = mapping.data(using: .utf8)!
+        
+        keyMap = try! decoder.decode(KeyMapping.self, from: data)
     }
     
     override func viewDidAppear() {
@@ -36,10 +52,14 @@ class ViewController: NSViewController {
     func onNoteEventReceived(event: NoteEvent) {
         textField.stringValue = "noteEvent: \(event)"
         switch event {
-        case .noteOn(let ch, let number, let velocity):
-            KeyStrokeGenerator.generateKeyDown(14)
+        case .noteOn(let ch, let number, _):
+            if let item = keyMap?.item(forNote: number, channel: ch) {
+                KeyStrokeGenerator.generateKeyDown(item.keyCode)
+            }
         case .noteOff(let ch, let number):
-            KeyStrokeGenerator.generateKeyUp(14)
+            if let item = keyMap?.item(forNote: number, channel: ch) {
+                KeyStrokeGenerator.generateKeyUp(item.keyCode)
+            }
         }
     }
 }

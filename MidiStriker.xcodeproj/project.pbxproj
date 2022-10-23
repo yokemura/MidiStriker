@@ -19,6 +19,9 @@
 		4B0C733329041E6600739653 /* MIDIPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733229041E6600739653 /* MIDIPort.swift */; };
 		4B0C73352904289A00739653 /* NoteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73342904289A00739653 /* NoteEvent.swift */; };
 		4B0C73372904DD1400739653 /* KeyStrokeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73362904DD1400739653 /* KeyStrokeGenerator.swift */; };
+		4B0C7339290528B100739653 /* KeyMappingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C7338290528B100739653 /* KeyMappingItem.swift */; };
+		4B0C733C29053CE300739653 /* Sauce in Frameworks */ = {isa = PBXBuildFile; productRef = 4B0C733B29053CE300739653 /* Sauce */; };
+		4B0C733E290542EE00739653 /* KeyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733D290542EE00739653 /* KeyMapping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		4B0C733229041E6600739653 /* MIDIPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIPort.swift; sourceTree = "<group>"; };
 		4B0C73342904289A00739653 /* NoteEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEvent.swift; sourceTree = "<group>"; };
 		4B0C73362904DD1400739653 /* KeyStrokeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStrokeGenerator.swift; sourceTree = "<group>"; };
+		4B0C7338290528B100739653 /* KeyMappingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMappingItem.swift; sourceTree = "<group>"; };
+		4B0C733D290542EE00739653 /* KeyMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMapping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0C733C29053CE300739653 /* Sauce in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +121,8 @@
 				4B0C733229041E6600739653 /* MIDIPort.swift */,
 				4B0C73342904289A00739653 /* NoteEvent.swift */,
 				4B0C73362904DD1400739653 /* KeyStrokeGenerator.swift */,
+				4B0C7338290528B100739653 /* KeyMappingItem.swift */,
+				4B0C733D290542EE00739653 /* KeyMapping.swift */,
 			);
 			path = MidiStriker;
 			sourceTree = "<group>";
@@ -152,6 +160,9 @@
 			dependencies = (
 			);
 			name = MidiStriker;
+			packageProductDependencies = (
+				4B0C733B29053CE300739653 /* Sauce */,
+			);
 			productName = MidiStriker;
 			productReference = 4B0C73002904101000739653 /* MidiStriker.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 4B0C72F72904101000739653;
+			packageReferences = (
+				4B0C733A29053CE300739653 /* XCRemoteSwiftPackageReference "Sauce" */,
+			);
 			productRefGroup = 4B0C73012904101000739653 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,10 +283,12 @@
 				4B0C73062904101000739653 /* ViewController.swift in Sources */,
 				4B0C73372904DD1400739653 /* KeyStrokeGenerator.swift in Sources */,
 				4B0C73042904101000739653 /* AppDelegate.swift in Sources */,
+				4B0C7339290528B100739653 /* KeyMappingItem.swift in Sources */,
 				4B0C73352904289A00739653 /* NoteEvent.swift in Sources */,
 				4B0C732F290413ED00739653 /* MIDIManager.swift in Sources */,
 				4B0C733329041E6600739653 /* MIDIPort.swift in Sources */,
 				4B0C733129041BB400739653 /* MIDISource.swift in Sources */,
+				4B0C733E290542EE00739653 /* KeyMapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B0C733A29053CE300739653 /* XCRemoteSwiftPackageReference "Sauce" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Clipy/Sauce";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B0C733B29053CE300739653 /* Sauce */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B0C733A29053CE300739653 /* XCRemoteSwiftPackageReference "Sauce" */;
+			productName = Sauce;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B0C72F82904101000739653 /* Project object */;
 }
