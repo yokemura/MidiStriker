@@ -20,7 +20,9 @@ class ViewController: NSViewController {
     "mapping": [
         {"note": 48, "key": "a"},
         {"note": 49, "key": "b"},
-        {"note": 50, "key": "space"}
+        {"note": 50, "key": "space"},
+        {"note": 51, "key": "rightBracket"},
+        {"note": 52, "key": "@"}
     ]
 }
 """
@@ -53,12 +55,14 @@ class ViewController: NSViewController {
         textField.stringValue = "noteEvent: \(event)"
         switch event {
         case .noteOn(let ch, let number, _):
-            if let item = keyMap?.item(forNote: number, channel: ch) {
-                KeyStrokeGenerator.generateKeyDown(item.keyCode)
+            if let item = keyMap?.item(forNote: number, channel: ch),
+               let keyCode = item.keyCode {
+                KeyStrokeGenerator.generateKeyDown(keyCode)
             }
         case .noteOff(let ch, let number):
-            if let item = keyMap?.item(forNote: number, channel: ch) {
-                KeyStrokeGenerator.generateKeyUp(item.keyCode)
+            if let item = keyMap?.item(forNote: number, channel: ch),
+               let keyCode = item.keyCode {
+                KeyStrokeGenerator.generateKeyUp(keyCode)
             }
         }
     }
