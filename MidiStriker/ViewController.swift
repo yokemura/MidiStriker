@@ -35,6 +35,12 @@ class ViewController: NSViewController {
     
     func onNoteEventReceived(event: NoteEvent) {
         textField.stringValue = "noteEvent: \(event)"
+        switch event {
+        case .noteOn(let ch, let number, let velocity):
+            KeyStrokeGenerator.generateKeyDown(14)
+        case .noteOff(let ch, let number):
+            KeyStrokeGenerator.generateKeyUp(14)
+        }
     }
 }
 
