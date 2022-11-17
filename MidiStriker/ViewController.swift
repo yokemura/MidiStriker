@@ -97,17 +97,16 @@ class ViewController: NSViewController {
     }
     
     private func updateSource() {
-        guard let pref = preferredDeviceName else {
+        guard let pref = preferredDeviceName,
+              let manager = manager else {
             return
         }
-        let index = manager?.selectSourceByName(pref)
-
-        if index == nil {
-            // 実際にはそのデバイスはない
-            sourceCombo.stringValue = "(Not connected) \(pref)"
-        } else {
-            // 保存しておいた名前にマッチするデバイスが実際にあった
+        let isFound = manager.selectSourceByName(pref)
+        
+        if isFound {
             sourceCombo.stringValue = pref
+        } else {
+            sourceCombo.stringValue = "(Not connected) \(pref)"
         }
     }
     
