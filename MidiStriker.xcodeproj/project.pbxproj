@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B0C73042904101000739653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73032904101000739653 /* AppDelegate.swift */; };
+		4B0C73062904101000739653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73052904101000739653 /* ViewController.swift */; };
+		4B0C73082904101100739653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C73072904101100739653 /* Assets.xcassets */; };
+		4B0C730B2904101100739653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0C73092904101100739653 /* Main.storyboard */; };
+		4B0C73162904101200739653 /* MidiStrikerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73152904101200739653 /* MidiStrikerTests.swift */; };
+		4B0C73202904101200739653 /* MidiStrikerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C731F2904101200739653 /* MidiStrikerUITests.swift */; };
+		4B0C73222904101200739653 /* MidiStrikerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73212904101200739653 /* MidiStrikerUITestsLaunchTests.swift */; };
+		4B0C732F290413ED00739653 /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C732E290413ED00739653 /* MIDIManager.swift */; };
+		4B0C733129041BB400739653 /* MIDISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733029041BB400739653 /* MIDISource.swift */; };
+		4B0C733329041E6600739653 /* MIDIPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733229041E6600739653 /* MIDIPort.swift */; };
+		4B0C73352904289A00739653 /* NoteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73342904289A00739653 /* NoteEvent.swift */; };
+		4B0C73372904DD1400739653 /* KeyStrokeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C73362904DD1400739653 /* KeyStrokeGenerator.swift */; };
+		4B0C7339290528B100739653 /* KeyMappingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C7338290528B100739653 /* KeyMappingItem.swift */; };
+		4B0C733C29053CE300739653 /* Sauce in Frameworks */ = {isa = PBXBuildFile; productRef = 4B0C733B29053CE300739653 /* Sauce */; };
+		4B0C733E290542EE00739653 /* KeyMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0C733D290542EE00739653 /* KeyMapping.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B0C73122904101200739653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B0C72F82904101000739653 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B0C72FF2904101000739653;
+			remoteInfo = MidiStriker;
+		};
+		4B0C731C2904101200739653 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B0C72F82904101000739653 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B0C72FF2904101000739653;
+			remoteInfo = MidiStriker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B0C73002904101000739653 /* MidiStriker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiStriker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0C73032904101000739653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B0C73052904101000739653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B0C73072904101100739653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B0C730A2904101100739653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B0C730C2904101100739653 /* MidiStriker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MidiStriker.entitlements; sourceTree = "<group>"; };
+		4B0C73112904101200739653 /* MidiStrikerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidiStrikerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0C73152904101200739653 /* MidiStrikerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiStrikerTests.swift; sourceTree = "<group>"; };
+		4B0C731B2904101200739653 /* MidiStrikerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidiStrikerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0C731F2904101200739653 /* MidiStrikerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiStrikerUITests.swift; sourceTree = "<group>"; };
+		4B0C73212904101200739653 /* MidiStrikerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiStrikerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B0C732E290413ED00739653 /* MIDIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIManager.swift; sourceTree = "<group>"; };
+		4B0C733029041BB400739653 /* MIDISource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISource.swift; sourceTree = "<group>"; };
+		4B0C733229041E6600739653 /* MIDIPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIPort.swift; sourceTree = "<group>"; };
+		4B0C73342904289A00739653 /* NoteEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEvent.swift; sourceTree = "<group>"; };
+		4B0C73362904DD1400739653 /* KeyStrokeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStrokeGenerator.swift; sourceTree = "<group>"; };
+		4B0C7338290528B100739653 /* KeyMappingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMappingItem.swift; sourceTree = "<group>"; };
+		4B0C733D290542EE00739653 /* KeyMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMapping.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B0C72FD2904101000739653 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0C733C29053CE300739653 /* Sauce in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0C730E2904101200739653 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0C73182904101200739653 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B0C72F72904101000739653 = {
+			isa = PBXGroup;
+			children = (
+				4B0C73022904101000739653 /* MidiStriker */,
+				4B0C73142904101200739653 /* MidiStrikerTests */,
+				4B0C731E2904101200739653 /* MidiStrikerUITests */,
+				4B0C73012904101000739653 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B0C73012904101000739653 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C73002904101000739653 /* MidiStriker.app */,
+				4B0C73112904101200739653 /* MidiStrikerTests.xctest */,
+				4B0C731B2904101200739653 /* MidiStrikerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B0C73022904101000739653 /* MidiStriker */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C73032904101000739653 /* AppDelegate.swift */,
+				4B0C73052904101000739653 /* ViewController.swift */,
+				4B0C73072904101100739653 /* Assets.xcassets */,
+				4B0C73092904101100739653 /* Main.storyboard */,
+				4B0C730C2904101100739653 /* MidiStriker.entitlements */,
+				4B0C732E290413ED00739653 /* MIDIManager.swift */,
+				4B0C733029041BB400739653 /* MIDISource.swift */,
+				4B0C733229041E6600739653 /* MIDIPort.swift */,
+				4B0C73342904289A00739653 /* NoteEvent.swift */,
+				4B0C73362904DD1400739653 /* KeyStrokeGenerator.swift */,
+				4B0C7338290528B100739653 /* KeyMappingItem.swift */,
+				4B0C733D290542EE00739653 /* KeyMapping.swift */,
+			);
+			path = MidiStriker;
+			sourceTree = "<group>";
+		};
+		4B0C73142904101200739653 /* MidiStrikerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C73152904101200739653 /* MidiStrikerTests.swift */,
+			);
+			path = MidiStrikerTests;
+			sourceTree = "<group>";
+		};
+		4B0C731E2904101200739653 /* MidiStrikerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B0C731F2904101200739653 /* MidiStrikerUITests.swift */,
+				4B0C73212904101200739653 /* MidiStrikerUITestsLaunchTests.swift */,
+			);
+			path = MidiStrikerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B0C72FF2904101000739653 /* MidiStriker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B0C73252904101200739653 /* Build configuration list for PBXNativeTarget "MidiStriker" */;
+			buildPhases = (
+				4B0C72FC2904101000739653 /* Sources */,
+				4B0C72FD2904101000739653 /* Frameworks */,
+				4B0C72FE2904101000739653 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MidiStriker;
+			packageProductDependencies = (
+				4B0C733B29053CE300739653 /* Sauce */,
+			);
+			productName = MidiStriker;
+			productReference = 4B0C73002904101000739653 /* MidiStriker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B0C73102904101200739653 /* MidiStrikerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B0C73282904101200739653 /* Build configuration list for PBXNativeTarget "MidiStrikerTests" */;
+			buildPhases = (
+				4B0C730D2904101200739653 /* Sources */,
+				4B0C730E2904101200739653 /* Frameworks */,
+				4B0C730F2904101200739653 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B0C73132904101200739653 /* PBXTargetDependency */,
+			);
+			name = MidiStrikerTests;
+			productName = MidiStrikerTests;
+			productReference = 4B0C73112904101200739653 /* MidiStrikerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B0C731A2904101200739653 /* MidiStrikerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B0C732B2904101200739653 /* Build configuration list for PBXNativeTarget "MidiStrikerUITests" */;
+			buildPhases = (
+				4B0C73172904101200739653 /* Sources */,
+				4B0C73182904101200739653 /* Frameworks */,
+				4B0C73192904101200739653 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B0C731D2904101200739653 /* PBXTargetDependency */,
+			);
+			name = MidiStrikerUITests;
+			productName = MidiStrikerUITests;
+			productReference = 4B0C731B2904101200739653 /* MidiStrikerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B0C72F82904101000739653 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					4B0C72FF2904101000739653 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					4B0C73102904101200739653 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 4B0C72FF2904101000739653;
+					};
+					4B0C731A2904101200739653 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 4B0C72FF2904101000739653;
+					};
+				};
+			};
+			buildConfigurationList = 4B0C72FB2904101000739653 /* Build configuration list for PBXProject "MidiStriker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B0C72F72904101000739653;
+			packageReferences = (
+				4B0C733A29053CE300739653 /* XCRemoteSwiftPackageReference "Sauce" */,
+			);
+			productRefGroup = 4B0C73012904101000739653 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B0C72FF2904101000739653 /* MidiStriker */,
+				4B0C73102904101200739653 /* MidiStrikerTests */,
+				4B0C731A2904101200739653 /* MidiStrikerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B0C72FE2904101000739653 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0C73082904101100739653 /* Assets.xcassets in Resources */,
+				4B0C730B2904101100739653 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0C730F2904101200739653 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0C73192904101200739653 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B0C72FC2904101000739653 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0C73062904101000739653 /* ViewController.swift in Sources */,
+				4B0C73372904DD1400739653 /* KeyStrokeGenerator.swift in Sources */,
+				4B0C73042904101000739653 /* AppDelegate.swift in Sources */,
+				4B0C7339290528B100739653 /* KeyMappingItem.swift in Sources */,
+				4B0C73352904289A00739653 /* NoteEvent.swift in Sources */,
+				4B0C732F290413ED00739653 /* MIDIManager.swift in Sources */,
+				4B0C733329041E6600739653 /* MIDIPort.swift in Sources */,
+				4B0C733129041BB400739653 /* MIDISource.swift in Sources */,
+				4B0C733E290542EE00739653 /* KeyMapping.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0C730D2904101200739653 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0C73162904101200739653 /* MidiStrikerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0C73172904101200739653 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0C73222904101200739653 /* MidiStrikerUITestsLaunchTests.swift in Sources */,
+				4B0C73202904101200739653 /* MidiStrikerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B0C73132904101200739653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B0C72FF2904101000739653 /* MidiStriker */;
+			targetProxy = 4B0C73122904101200739653 /* PBXContainerItemProxy */;
+		};
+		4B0C731D2904101200739653 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B0C72FF2904101000739653 /* MidiStriker */;
+			targetProxy = 4B0C731C2904101200739653 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B0C73092904101100739653 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B0C730A2904101100739653 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B0C73232904101200739653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B0C73242904101200739653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4B0C73262904101200739653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MidiStriker/MidiStriker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymck.MidiStriker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4B0C73272904101200739653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MidiStriker/MidiStriker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymck.MidiStriker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4B0C73292904101200739653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymck.MidiStrikerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MidiStriker.app/Contents/MacOS/MidiStriker";
+			};
+			name = Debug;
+		};
+		4B0C732A2904101200739653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymck.MidiStrikerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MidiStriker.app/Contents/MacOS/MidiStriker";
+			};
+			name = Release;
+		};
+		4B0C732C2904101200739653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymck.MidiStrikerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MidiStriker;
+			};
+			name = Debug;
+		};
+		4B0C732D2904101200739653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ymck.MidiStrikerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MidiStriker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B0C72FB2904101000739653 /* Build configuration list for PBXProject "MidiStriker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0C73232904101200739653 /* Debug */,
+				4B0C73242904101200739653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B0C73252904101200739653 /* Build configuration list for PBXNativeTarget "MidiStriker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0C73262904101200739653 /* Debug */,
+				4B0C73272904101200739653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B0C73282904101200739653 /* Build configuration list for PBXNativeTarget "MidiStrikerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0C73292904101200739653 /* Debug */,
+				4B0C732A2904101200739653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B0C732B2904101200739653 /* Build configuration list for PBXNativeTarget "MidiStrikerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B0C732C2904101200739653 /* Debug */,
+				4B0C732D2904101200739653 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B0C733A29053CE300739653 /* XCRemoteSwiftPackageReference "Sauce" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Clipy/Sauce";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B0C733B29053CE300739653 /* Sauce */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B0C733A29053CE300739653 /* XCRemoteSwiftPackageReference "Sauce" */;
+			productName = Sauce;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4B0C72F82904101000739653 /* Project object */;
+}
