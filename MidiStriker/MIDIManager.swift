@@ -99,4 +99,13 @@ class MIDIManager {
         }
     }
     
+    func selectSourceByName(_ name: String) -> Int? {
+        let indexOrNil = sources.firstIndex { source in
+            source.modelAndPortName == name
+        }
+        if let index = indexOrNil {
+            startObserving(source: sources[index])
+        }
+        return indexOrNil
+    }
 }
