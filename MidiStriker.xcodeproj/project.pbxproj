@@ -461,6 +461,8 @@
 				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MidiStriker/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "キーボード入力を使用します";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -488,6 +490,8 @@
 				DEVELOPMENT_TEAM = 2Z7AZ9RMWS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MidiStriker/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "キーボード入力を使用します";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
